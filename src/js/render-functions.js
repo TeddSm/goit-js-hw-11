@@ -8,7 +8,7 @@ let lightbox;
 export function createGallery(images) {
   let markup = '';
   images.forEach(image => {
-    markup += `<li class="gallery-item"><a href="${image.largeImageURL}"><img class="gallery-img" src="${image.webformatURL}" alt="${image.alt}"></a><div class=container><div class="text-box"><h3>Likes</h3><p>${image.likes}</p></div><div class="text-box"><h3>Views</h3><p>${image.views}</p></div><div class="text-box"><h3>Comments</h3><p>${image.comments}</p></div><div class="text-box"><h3>Downloads</h3><p>${image.downloads}</p></div></div></li>`;
+    markup += `<li class="gallery-item"><a href="${image.largeImageURL}"><img class="gallery-img" src="${image.webformatURL}" alt="${image.tags}"></a><div class="container"><div class="text-box"><h3>Likes</h3><p>${image.likes}</p></div><div class="text-box"><h3>Views</h3><p>${image.views}</p></div><div class="text-box"><h3>Comments</h3><p>${image.comments}</p></div><div class="text-box"><h3>Downloads</h3><p>${image.downloads}</p></div></div></li>`;
   });
   ul.insertAdjacentHTML('beforeend', markup);
 

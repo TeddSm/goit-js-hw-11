@@ -26,13 +26,13 @@ form.addEventListener('submit', event => {
   showLoader();
   getImagesByQuery(query)
     .then(images => {
-      if (images.length === 0) {
+      if (images.hits.length === 0) {
         iziToast.error({
           message: 'Sorry, no images found. Please try again!',
           position: 'topRight',
         });
       } else {
-        createGallery(images);
+        createGallery(images.hits);
       }
     })
     .catch(error => {
