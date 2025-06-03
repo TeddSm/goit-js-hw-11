@@ -13,14 +13,3 @@ export function getImagesByQuery(query) {
     })
     .then(response => response.data);
 }
-// .then(response => {
-//   return response.data.hits.map(hit => ({
-//     webformatURL: hit.webformatURL,
-//     largeImageURL: hit.largeImageURL,
-//     alt: hit.tags,
-//     likes: hit.likes,
-//     views: hit.views,
-//     comments: hit.comments,
-//     downloads: hit.downloads,
-//   }));
-// });
